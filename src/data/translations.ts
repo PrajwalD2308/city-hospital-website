@@ -1,0 +1,40 @@
+export const translations = {
+  en: {
+    appointmentTitle: "Book Appointment",
+    appointmentSubtitle: "Simple, fast & trusted appointment booking.",
+    patientName: "Patient Name",
+    mobileNumber: "Mobile Number",
+    selectDepartment: "Select Department",
+    selectDoctor: "Select Doctor",
+    appointmentType: "Appointment Type",
+    problem: "Describe your problem",
+    submit: "Submit & WhatsApp",
+    emergencyNote: "In case of emergency, please call immediately",
+  },
+
+  hi: {
+    appointmentTitle: "अपॉइंटमेंट बुक करें",
+    appointmentSubtitle: "सरल, तेज़ और भरोसेमंद अपॉइंटमेंट बुकिंग।",
+    patientName: "मरीज़ का नाम",
+    mobileNumber: "मोबाइल नंबर",
+    selectDepartment: "विभाग चुनें",
+    selectDoctor: "डॉक्टर चुनें",
+    appointmentType: "अपॉइंटमेंट प्रकार",
+    problem: "अपनी समस्या लिखें",
+    submit: "व्हाट्सएप पर भेजें",
+    emergencyNote: "आपातकाल में तुरंत कॉल करें",
+  },
+
+  mr: {
+    appointmentTitle: "अपॉइंटमेंट बुक करा",
+    appointmentSubtitle: "सोपे, जलद आणि विश्वासार्ह अपॉइंटमेंट बुकिंग.",
+    patientName: "रुग्णाचे नाव",
+    mobileNumber: "मोबाइल नंबर",
+    selectDepartment: "विभाग निवडा",
+    selectDoctor: "डॉक्टर निवडा",
+    appointmentType: "अपॉइंटमेंट प्रकार",
+    problem: "तुमची समस्या लिहा",
+    submit: "व्हॉट्सअॅपवर पाठवा",
+    emergencyNote: "आपत्कालीन परिस्थितीत त्वरित कॉल करा",
+  },
+};
