@@ -33,7 +33,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/city-hospital-logo.png"
+                src="/images/city-hospital-logoo.png"
                 alt="City Multispeciality Hospital"
                 width={200}
                 height={70}

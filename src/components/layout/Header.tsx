@@ -25,7 +25,7 @@ export default function Header() {
             {/* MOBILE LOGO */}
             <div className="lg:hidden flex items-center">
               <Image
-                src="/images/city-hospital-logo.png"
+                src="/images/city-hospital-logoo.png"
                 alt="City Multispeciality Hospital"
                 width={180}
                 height={60}
