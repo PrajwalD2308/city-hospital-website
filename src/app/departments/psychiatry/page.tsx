@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -27,6 +27,45 @@ const doctors = [
 export default function PsychiatryPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Psychiatrist in Amravati | Mental Health Treatment & Counselling
+        </title>
+
+        <meta
+          name="description"
+          content="Confidential and compassionate mental health treatment in Amravati. Depression, anxiety, stress, addiction and child psychiatry services at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="Psychiatrist in Amravati, Mental Health Doctor Amravati, Depression Treatment Amravati, Anxiety Specialist Amravati, Counselling in Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Psychiatry & Mental Health | City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Professional and confidential mental healthcare services including anxiety, depression and counselling."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/psychiatry"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/psychiatry"
+        />
+      </Head>
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* 🔥 MOBILE FLOATING ICONS */}
@@ -111,7 +150,7 @@ export default function PsychiatryPage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb"
+              src="https://images.unsplash.com/photo-1621887348744-6b0444f8a058?auto=format&fit=crop&w=1200&q=80"
               alt="Psychiatry Department"
               className="w-full h-full object-cover"
             />

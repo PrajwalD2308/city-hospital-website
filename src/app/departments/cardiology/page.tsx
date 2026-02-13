@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import {
   HeartPulse,
   Clock,
@@ -23,6 +24,52 @@ const doctors = [
 export default function CardiologyPage() {
   return (
     <>
+      {/* ================= SEO HEAD ================= */}
+      <Head>
+        <title>
+          Cardiology & Cardiac Care in Amravati | City Multispeciality Hospital
+        </title>
+
+        <meta
+          name="description"
+          content="Advanced cardiology and cardiac care services in Amravati including angiography, angioplasty, ECG, 2D Echo, cardiac ICU and 24×7 heart emergency treatment at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="Cardiologist in Amravati,
+    Heart Specialist Amravati,
+    Angioplasty in Amravati,
+    Angiography Hospital Amravati,
+    Cardiac ICU Amravati,
+    Heart Attack Treatment Amravati,
+    Best Cardiology Hospital in Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Cardiology & Cardiac Care | City Multispeciality Hospital Amravati"
+        />
+        <meta
+          property="og:description"
+          content="Expert heart care with advanced diagnostics and 24×7 cardiac emergency support in Amravati."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/cardiology"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/cardiology"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* Mobile Floating Icon */}
@@ -88,7 +135,7 @@ export default function CardiologyPage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1460672985063-6764ac8b9c74"
+              src="https://images.unsplash.com/photo-1460672985063-6764ac8b9c74?auto=format&fit=crop&w=1200&q=80"
               alt="Cardiology Department"
               width={800}
               height={500}

@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Bone, Clock, PhoneCall, Ambulance, CheckCircle } from "lucide-react";
@@ -16,6 +16,45 @@ const doctors = [
 export default function OrthopaedicsPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Orthopaedic & Joint Replacement in Amravati | Bone Specialist
+        </title>
+
+        <meta
+          name="description"
+          content="Advanced orthopaedic and joint replacement surgery in Amravati. Knee replacement, hip replacement, fracture care and trauma treatment at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="Orthopaedic Doctor in Amravati, Joint Replacement Amravati, Knee Replacement Surgery Amravati, Bone Specialist Amravati, Fracture Treatment Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Orthopaedics & Joint Replacement | City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive bone and joint care including knee replacement, hip replacement and trauma surgery."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/orthopaedics"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/orthopaedics"
+        />
+      </Head>
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* 🔥 MOBILE FLOATING ICON */}
@@ -93,7 +132,7 @@ export default function OrthopaedicsPage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1597764690523-15bea4c581c9"
+              src="https://images.unsplash.com/photo-1597764690523-15bea4c581c9?auto=format&fit=crop&w=1200&q=80"
               alt="Orthopaedics Department"
               className="w-full h-full object-cover"
             />

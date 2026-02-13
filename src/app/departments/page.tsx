@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
@@ -108,6 +109,45 @@ const facilities = [
 export default function DepartmentsPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Hospital Departments in Amravati | City Multispeciality Hospital
+        </title>
+
+        <meta
+          name="description"
+          content="Explore advanced medical departments at City Multispeciality Hospital, Amravati including Cardiology, Neurology, Orthopaedics, Psychiatry, Emergency & Critical Care."
+        />
+
+        <meta
+          name="keywords"
+          content="Hospital departments Amravati, Cardiology Amravati, Neurology Amravati, Orthopaedics hospital Amravati, Emergency hospital Amravati, Best multispeciality hospital Amravati"
+        />
+
+        <meta
+          property="og:title"
+          content="Hospital Departments in Amravati | City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:description"
+          content="Discover expert medical departments with advanced technology and compassionate care at City Multispeciality Hospital, Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/departments"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/departments"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
 
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">

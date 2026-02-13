@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
@@ -53,6 +54,43 @@ ${f.message.value}
 
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>Contact City Multispeciality Hospital | Amravati</title>
+
+        <meta
+          name="description"
+          content="Contact City Multispeciality Hospital & Critical Care Centre, Amravati for appointments, emergency services, ambulance support, and medical consultations."
+        />
+
+        <meta
+          name="keywords"
+          content="Contact hospital Amravati, Emergency hospital Amravati, Ambulance service Amravati, Hospital phone number Amravati, City Multispeciality Hospital contact"
+        />
+
+        <meta
+          property="og:title"
+          content="Contact City Multispeciality Hospital | Amravati"
+        />
+
+        <meta
+          property="og:description"
+          content="Reach out to City Multispeciality Hospital for appointments, emergency care, and expert medical consultations in Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/contact"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/contact"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">
         {/* Decorative glow shapes */}

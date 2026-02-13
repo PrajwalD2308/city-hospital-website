@@ -18,7 +18,6 @@ export default function MobileInfoBar() {
   return (
     <div className="lg:hidden sticky top-[64px] z-40 bg-white border-b shadow-md">
       <div className="grid grid-cols-3 text-center text-[11px] font-medium">
-
         {/* ================= EMERGENCY ================= */}
         <a
           href="tel:+917709912176"
@@ -32,11 +31,7 @@ export default function MobileInfoBar() {
           `}
         >
           <motion.div
-            animate={
-              isNight
-                ? { scale: [1, 1.2, 1] }
-                : { scale: 1 }
-            }
+            animate={isNight ? { scale: [1, 1.2, 1] } : { scale: 1 }}
             transition={{
               duration: 1.2,
               repeat: isNight ? Infinity : 0,
@@ -45,11 +40,10 @@ export default function MobileInfoBar() {
             <Phone className="text-red-600" size={18} />
           </motion.div>
 
-          <span className="font-semibold leading-tight">
-            Emergency
-          </span>
-          <span className="text-[10px]">
-            आपत्कालीन सेवा
+          <span className="font-semibold leading-tight">Emergency</span>
+          <span className="text-[10px]">आपत्कालीन सेवा</span>
+          <span className="text-[10px] font-semibold text-red-600">
+            +91 77099 12176
           </span>
 
           {isNight && (
@@ -72,8 +66,9 @@ export default function MobileInfoBar() {
           </motion.div>
 
           <span>Ambulance</span>
-          <span className="text-[10px] text-slate-500">
-            रुग्णवाहिका
+          <span className="text-[10px] text-slate-500">रुग्णवाहिका</span>
+          <span className="text-[10px] font-semibold text-blue-600">
+            +91 77099 12176
           </span>
         </a>
 
@@ -90,11 +85,11 @@ export default function MobileInfoBar() {
           </motion.div>
 
           <span>Appointment</span>
-          <span className="text-[10px] text-slate-500">
-            भेटीची वेळ
+          <span className="text-[10px] text-slate-500">भेटीची वेळ</span>
+          <span className="text-[10px] font-semibold text-green-600">
+            0721 257 1590
           </span>
         </a>
-
       </div>
     </div>
   );

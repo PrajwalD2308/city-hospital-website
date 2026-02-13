@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -77,6 +78,43 @@ Thank you.
 
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>Best Doctors in Amravati | City Multispeciality Hospital</title>
+
+        <meta
+          name="description"
+          content="Meet experienced and trusted doctors at City Multispeciality Hospital, Amravati. Expert specialists in Cardiology, Neurology, Orthopaedics, Psychiatry, and Critical Care."
+        />
+
+        <meta
+          name="keywords"
+          content="Best doctors in Amravati, Cardiologist Amravati, Neurologist Amravati, Orthopaedic doctor Amravati, Hospital doctors Amravati, Multispeciality hospital Amravati"
+        />
+
+        <meta
+          property="og:title"
+          content="Best Doctors in Amravati | City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:description"
+          content="Consult experienced specialists and book appointments with trusted doctors at City Multispeciality Hospital, Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/doctors"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/doctors"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
 
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">

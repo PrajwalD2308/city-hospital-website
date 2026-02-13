@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -12,6 +13,41 @@ export default function AboutPage() {
 
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          About City Multispeciality Hospital | Best Hospital in Amravati
+        </title>
+
+        <meta
+          name="description"
+          content="City Multispeciality Hospital & Critical Care Centre in Amravati provides advanced multispeciality healthcare, ICU services, emergency care, diagnostics, and compassionate treatment."
+        />
+
+        <meta
+          name="keywords"
+          content="City Multispeciality Hospital, Best hospital in Amravati, ICU hospital Amravati, Critical Care Centre, 24x7 emergency hospital, Multispeciality hospital Maharashtra"
+        />
+
+        <meta
+          property="og:title"
+          content="About City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Learn about our vision, mission, expert doctors, and 24x7 emergency services in Amravati."
+        />
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/about"
+        />
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/about"
+        />
+      </Head>
       {/* ================= PREMIUM ABOUT HERO ================= */}
       <section className="relative h-[70vh] lg:h-[85vh] overflow-hidden flex items-center">
         {/* Background Image */}

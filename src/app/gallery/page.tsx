@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useMotionValue } from "framer-motion";
@@ -278,6 +279,45 @@ export default function GalleryPage() {
 
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Hospital Gallery | ICU, Cath Lab, OT & Infrastructure | Amravati
+        </title>
+
+        <meta
+          name="description"
+          content="Explore City Multispeciality Hospital gallery in Amravati. View ICU, Cath Lab, Operation Theatre, infrastructure, doctors, ambulance and advanced medical facilities."
+        />
+
+        <meta
+          name="keywords"
+          content="Hospital gallery Amravati, ICU images Amravati, Cath Lab hospital Amravati, Operation Theatre Amravati, Hospital infrastructure photos, Best hospital Amravati"
+        />
+
+        <meta
+          property="og:title"
+          content="Hospital Photo & Video Gallery | City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:description"
+          content="See real photos and videos of ICU, OT, Cath Lab, doctors and hospital infrastructure in Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/gallery"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/gallery"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">
         {/* Decorative glow shapes */}

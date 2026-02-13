@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -23,6 +24,46 @@ const doctors = [
 export default function MedicinePage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          General Medicine & Critical Care in Amravati | City Multispeciality
+          Hospital
+        </title>
+
+        <meta
+          name="description"
+          content="Expert General Medicine and Critical Care services in Amravati. Advanced ICU, emergency care, diabetes, hypertension, stroke and infection management at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="General Medicine Amravati, Critical Care Hospital Amravati, ICU Hospital Amravati, Physician in Amravati, Internal Medicine Doctor Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="General Medicine & Critical Care | City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive internal medicine and ICU services with 24×7 emergency care in Amravati."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/medicine"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/medicine"
+        />
+      </Head>
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* 🔥 MOBILE FLOATING ICON */}
@@ -100,7 +141,7 @@ export default function MedicinePage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+              src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1200&q=80"
               alt="Medicine Department"
               className="w-full h-full object-cover"
             />

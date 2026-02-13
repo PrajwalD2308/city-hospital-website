@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
@@ -81,6 +82,42 @@ ${f.name.value}
 
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>Book Appointment | City Multispeciality Hospital Amravati</title>
+
+        <meta
+          name="description"
+          content="Book your appointment online at City Multispeciality Hospital & Critical Care Centre, Amravati. Schedule consultations with expert doctors for OPD, emergency, and tele-consult services."
+        />
+
+        <meta
+          name="keywords"
+          content="Book doctor appointment Amravati, Hospital appointment online, OPD booking Amravati, Emergency hospital Amravati, City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:title"
+          content="Book Appointment | City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:description"
+          content="Schedule your medical consultation with experienced specialists at City Multispeciality Hospital, Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/appointment"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/appointment"
+        />
+      </Head>
       {/* ================= HERO ================= */}
       <section className="relative py-24 md:py-32 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">
         {/* Glow Shapes (kept subtle) */}

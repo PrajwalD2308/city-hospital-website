@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +23,45 @@ const doctors = [
 export default function NeurologyPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Neurology & Neurosurgery in Amravati | Brain & Spine Specialist
+        </title>
+
+        <meta
+          name="description"
+          content="Advanced Neurology & Neurosurgery services in Amravati. Expert brain tumour surgery, stroke care, spine surgery and neuro emergency treatment at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="Neurologist in Amravati, Neurosurgeon in Amravati, Brain Specialist Amravati, Spine Surgery Amravati, Stroke Treatment Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Neurology & Neurosurgery | City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Complete brain and spine care including stroke management, tumour surgery and neuro ICU support."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/neurology"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/neurology"
+        />
+      </Head>
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* 🔥 MOBILE FLOATING ICON */}
@@ -99,7 +139,7 @@ export default function NeurologyPage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1566669419640-ae09e20a18d8?q=80&w=1074&auto=format"
+              src="https://images.unsplash.com/photo-1566669419640-ae09e20a18d8?auto=format&fit=crop&w=1200&q=80"
               alt="Neurology Department"
               width={800}
               height={500}

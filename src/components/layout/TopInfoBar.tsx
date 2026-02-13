@@ -34,7 +34,7 @@ export default function TopInfoBar() {
           {/* ================= LOGO ================= */}
           <div className="flex items-center h-full">
             <Image
-              src="/images/city-hospital-logo.png"
+              src="/images/city-hospital-logoo.png"
               alt="City Multispeciality Hospital"
               width={300}
               height={120}

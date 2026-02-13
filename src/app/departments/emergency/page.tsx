@@ -1,12 +1,55 @@
 "use client";
 
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
 import { Ambulance, Clock, PhoneCall, Siren, CheckCircle } from "lucide-react";
 
 export default function EmergencyPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          24×7 Emergency & Trauma Care in Amravati | City Multispeciality
+          Hospital
+        </title>
+
+        <meta
+          name="description"
+          content="24×7 Emergency and Trauma Care services in Amravati. Immediate treatment for accidents, heart attacks, stroke, fractures and critical medical emergencies at City Multispeciality Hospital."
+        />
+
+        <meta
+          name="keywords"
+          content="Emergency Hospital in Amravati, 24x7 Emergency Care Amravati, Trauma Care Amravati, ICU Emergency Amravati, Ambulance Service Amravati"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="24×7 Emergency & Trauma Care | City Multispeciality Hospital"
+        />
+        <meta
+          property="og:description"
+          content="Immediate life-saving emergency care with ICU and specialist support available round-the-clock in Amravati."
+        />
+        <meta
+          property="og:url"
+          content="https://citymultispecialityhospital.com/departments/emergency"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://citymultispecialityhospital.com/departments/emergency"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-24 bg-gradient-to-r from-[#4b1d3f] to-[#7A0C0C] text-white overflow-hidden">
         {/* 🔥 MOBILE FLOATING ICONS */}
@@ -92,7 +135,7 @@ export default function EmergencyPage() {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+              src="https://images.unsplash.com/photo-1761881917053-a48d16611196?auto=format&fit=crop&w=1200&q=80"
               alt="Emergency Department"
               className="w-full h-full object-cover"
             />

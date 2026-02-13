@@ -66,6 +66,7 @@ export default function ValuesPage() {
 
         {/* Desktop Overlay (unchanged) */}
         <div className="absolute inset-0 bg-black/70 hidden lg:block" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7A0C0C]/60 via-black/40 to-black/60" />
 
         {/* 🔥 Mobile Premium Gradient Overlay */}
         <motion.div

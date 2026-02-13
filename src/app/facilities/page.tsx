@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import PulseDivider from "@/components/PulseDivider";
@@ -113,6 +114,45 @@ const infrastructure = [
 export default function FacilitiesPage() {
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Hospital Facilities in Amravati | ICU, Cath Lab & Emergency Care
+        </title>
+
+        <meta
+          name="description"
+          content="Explore advanced hospital facilities at City Multispeciality Hospital, Amravati. 24x7 ICU, Cath Lab, Neuro ICU, Emergency Services, Modular OTs and Critical Care infrastructure."
+        />
+
+        <meta
+          name="keywords"
+          content="Hospital facilities in Amravati, ICU in Amravati, Cath Lab Amravati, Neuro ICU Amravati, Emergency hospital Amravati, Critical care hospital Amravati"
+        />
+
+        <meta
+          property="og:title"
+          content="Advanced Hospital Facilities | City Multispeciality Hospital Amravati"
+        />
+
+        <meta
+          property="og:description"
+          content="Modern infrastructure including ICU, Cath Lab, Neuro ICU, Modular Operation Theatres and 24x7 Emergency services in Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/facilities"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/facilities"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">
         {/* Decorative glow shapes */}

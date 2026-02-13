@@ -1,7 +1,7 @@
 "use client";
 
 import { useMotionValue } from "framer-motion";
-
+import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -71,6 +71,46 @@ export default function SpecialitiesPage() {
   const ySlow = useMotionValue(0);
   return (
     <>
+      {/* ================= SEO ================= */}
+      <Head>
+        <title>
+          Specialities & Superspecialities | City Multispeciality Hospital
+          Amravati
+        </title>
+
+        <meta
+          name="description"
+          content="Explore superspecialities and multispeciality departments at City Multispeciality Hospital, Amravati including Cardiology, Neurology, Orthopaedics, Critical Care, Psychiatry and Emergency Services."
+        />
+
+        <meta
+          name="keywords"
+          content="Cardiology hospital Amravati, Neurology hospital Amravati, Orthopaedic doctor Amravati, Critical care hospital Amravati, Superspeciality hospital Amravati, Best hospital in Amravati"
+        />
+
+        <meta
+          property="og:title"
+          content="Superspecialities | City Multispeciality Hospital"
+        />
+
+        <meta
+          property="og:description"
+          content="Advanced Cardiology, Neurosurgery, Critical Care, Orthopaedics and Emergency services in Amravati."
+        />
+
+        <meta
+          property="og:url"
+          content="https://city-multispeciality-hospital-websi.vercel.app/specialities"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://city-multispeciality-hospital-websi.vercel.app/specialities"
+        />
+      </Head>
+
       {/* ================= HERO ================= */}
       <section className="relative py-20 md:py-28 bg-gradient-to-r from-[#7A0C0C] via-[#8f1d1d] to-[#a73737] text-white overflow-hidden">
         {/* Decorative Glow Shapes */}
