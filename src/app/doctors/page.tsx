@@ -378,11 +378,11 @@ Thank you.
         </div>
       </section>
 
-      {/* ================= DOCTOR MODAL (DESKTOP FIXED, MOBILE SAME) ================= */}
+      {/* ================= DOCTOR MODAL ================= */}
       <AnimatePresence>
         {selectedDoctor && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-3"
+            className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-2 md:p-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -392,39 +392,42 @@ Thank you.
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 40, opacity: 0 }}
               className="
-                bg-white w-full max-w-5xl rounded-3xl overflow-hidden
-                max-h-[90vh]
-                grid md:grid-cols-2
-              "
+          bg-white w-full max-w-5xl rounded-3xl overflow-hidden
+
+          max-h-[80vh]
+          flex flex-col
+
+          md:max-h-[90vh]
+          md:grid md:grid-cols-2
+        "
             >
               {/* IMAGE */}
-              <div className="relative">
+              <div className="relative flex-shrink-0">
                 <img
                   src={selectedDoctor.image}
                   className="
-                    w-full object-cover
-                    h-64
-                    md:h-full
-                  "
+              w-full object-cover
+              h-44 sm:h-52
+              md:h-full
+            "
                 />
 
-                {/* Close / Back */}
                 <button
                   onClick={() => setSelectedDoctor(null)}
                   className="
-                    absolute top-4 left-4
-                    bg-white/90 backdrop-blur
-                    px-3 py-1 rounded-full
-                    text-sm font-medium shadow
-                    md:hidden
-                  "
+              absolute top-3 left-3
+              bg-white/90 backdrop-blur
+              px-3 py-1 rounded-full
+              text-sm font-medium shadow
+              md:hidden
+            "
                 >
                   ← Back
                 </button>
               </div>
 
               {/* CONTENT */}
-              <div className="p-6 md:p-8 overflow-y-auto">
+              <div className="p-4 md:p-8 overflow-y-auto flex-1">
                 <button
                   onClick={() => setSelectedDoctor(null)}
                   className="hidden md:flex items-center gap-2 text-sm mb-4"
@@ -432,7 +435,7 @@ Thank you.
                   <ArrowLeft size={16} /> Back to Doctors
                 </button>
 
-                <h2 className="text-2xl font-bold text-[#7A0C0C]">
+                <h2 className="text-xl md:text-2xl font-bold text-[#7A0C0C]">
                   {selectedDoctor.name}
                 </h2>
 
@@ -442,25 +445,33 @@ Thank you.
 
                 <p className="font-medium mt-1">{selectedDoctor.title}</p>
 
-                <p className="text-sm text-slate-600 mt-4">
+                <p className="text-sm text-slate-600 mt-3">
                   {selectedDoctor.about}
                 </p>
 
-                <ul className="list-disc ml-5 text-sm mt-4 space-y-1">
+                <ul className="list-disc ml-5 text-sm mt-3 space-y-1">
                   {selectedDoctor.services.map((s: string, i: number) => (
                     <li key={i}>{s}</li>
                   ))}
                 </ul>
 
-                <div className="bg-green-50 p-4 rounded-xl text-sm mt-6">
+                <div className="bg-green-50 p-3 md:p-4 rounded-xl text-sm mt-4">
                   <strong>OPD Timings</strong>
+
                   <p>Morning: {selectedDoctor.opd.morning}</p>
+
                   <p>Evening: {selectedDoctor.opd.evening}</p>
                 </div>
 
                 <button
                   onClick={() => setShowAppointment(true)}
-                  className="w-full mt-6 bg-[#7A0C0C] text-white py-3 rounded-full font-semibold"
+                  className="
+              w-full mt-4
+              bg-[#7A0C0C]
+              text-white
+              py-3 rounded-full
+              font-semibold
+            "
                 >
                   Book Appointment
                 </button>
@@ -469,7 +480,9 @@ Thank you.
           </motion.div>
         )}
       </AnimatePresence>
-      {/* ================= APPOINTMENT DRAWER (UPDATED PREMIUM UI) ================= */}
+
+      {/* ================= APPOINTMENT DRAWER ================= */}
+
       <AnimatePresence>
         {showAppointment && (
           <motion.div
@@ -481,101 +494,86 @@ Thank you.
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
               className="
-          absolute bottom-0 w-full 
+          absolute bottom-0 w-full
+          max-h-[85vh]
+
           md:right-0 md:top-0 md:h-full md:max-w-md
+
           bg-gradient-to-br from-[#7A0C0C] via-[#8E1B1B] to-[#a73737]
-          text-white rounded-t-3xl md:rounded-none
-          max-h-[92vh] overflow-y-auto shadow-2xl
+
+          text-white
+          rounded-t-3xl md:rounded-none
+
+          overflow-y-auto
         "
             >
-              <div className="p-6 space-y-6 pb-24">
-                {/* HEADER */}
-                <div>
-                  <h3 className="text-2xl font-bold mb-1 ">Book Appointment</h3>
-                  <p className="text-white/80 text-sm">
-                    Schedule consultation with our specialist doctor
-                  </p>
-                </div>
+              <div className="p-5 md:p-6 space-y-5 pb-20">
+                <h3 className="text-xl md:text-2xl font-bold">
+                  Book Appointment
+                </h3>
 
-                {/* FORM CARD */}
-                <div className="bg-white/10 backdrop-blur-xl p-5 rounded-2xl border border-white/20 shadow-lg">
-                  <form
-                    onSubmit={handleAppointmentSubmit}
-                    className="space-y-4"
+                <form onSubmit={handleAppointmentSubmit} className="space-y-4">
+                  <input
+                    name="patient"
+                    required
+                    placeholder="Patient Name"
+                    className="
+                w-full p-3 rounded-xl
+                bg-white text-black
+                border border-gray-300
+                focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
+              "
+                  />
+
+                  <input
+                    name="phone"
+                    required
+                    placeholder="Mobile Number"
+                    className="
+                w-full p-3 rounded-xl
+                bg-white text-black
+                border border-gray-300
+                focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
+              "
+                  />
+
+                  <input
+                    name="date"
+                    type="date"
+                    required
+                    className="
+                w-full p-3 rounded-xl
+                bg-white text-black
+                border border-gray-300
+                focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
+              "
+                  />
+
+                  <textarea
+                    name="problem"
+                    rows={3}
+                    placeholder="Describe problem"
+                    className="
+                w-full p-3 rounded-xl
+                bg-white text-black
+                border border-gray-300
+                focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
+              "
+                  />
+
+                  <button
+                    type="submit"
+                    className="
+                w-full
+                bg-white text-[#7A0C0C]
+                py-3 rounded-full
+                font-semibold
+              "
                   >
-                    {/* INPUT FIELD STYLE */}
-                    <input
-                      name="patient"
-                      required
-                      placeholder="Patient Name"
-                      className="
-                  w-full p-3 rounded-xl
-                  bg-white text-slate-800
-                  border border-slate-200
-                  focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
-                  transition
-                "
-                    />
-
-                    <input
-                      name="phone"
-                      required
-                      placeholder="Mobile Number"
-                      className="
-                  w-full p-3 rounded-xl
-                  bg-white text-slate-800
-                  border border-slate-200
-                  focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
-                  transition
-                "
-                    />
-
-                    <input
-                      name="date"
-                      type="date"
-                      required
-                      className="
-                  w-full p-3 rounded-xl
-                  bg-white text-slate-800
-                  border border-slate-200
-                  focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
-                  transition
-                "
-                    />
-
-                    <textarea
-                      name="problem"
-                      rows={3}
-                      placeholder="Describe problem"
-                      className="
-                  w-full p-3 rounded-xl
-                  bg-white text-slate-800
-                  border border-slate-200
-                  focus:outline-none focus:ring-2 focus:ring-[#7A0C0C]
-                  transition resize-none
-                "
-                    />
-
-                    {/* PREMIUM BUTTON */}
-                    <button
-                      type="submit"
-                      className="
-                  w-full mt-2
-                  bg-white text-[#7A0C0C]
-                  py-3 rounded-full
-                  font-semibold tracking-wide
-                  shadow-md
-                  hover:bg-slate-100
-                  active:scale-[0.98]
-                  transition-all
-                "
-                    >
-                      Submit
-                    </button>
-                  </form>
-                </div>
+                    Submit
+                  </button>
+                </form>
               </div>
             </motion.div>
           </motion.div>
